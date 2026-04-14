@@ -46,6 +46,36 @@ const Contact = () => {
           title="Get in Touch – Let’s Connect"
           sub="💬 Have questions or ideas? Let’s talk! 🚀"
         />
+
+        <div className="contact-info-strip">
+          <a
+            href="mailto:abdullahnaseem1386@gmail.com"
+            className="contact-info-item"
+          >
+            <div className="contact-info-icon">✉️</div>
+            <div>
+              <p className="contact-info-label">Email</p>
+              <p className="contact-info-value">abdullahnaseem1386@gmail.com</p>
+            </div>
+          </a>
+
+          <div className="contact-info-item">
+            <div className="contact-info-icon">📍</div>
+            <div>
+              <p className="contact-info-label">Location</p>
+              <p className="contact-info-value">Karachi, Pakistan</p>
+            </div>
+          </div>
+
+          <div className="contact-info-item">
+            <div className="contact-info-icon">⚡</div>
+            <div>
+              <p className="contact-info-label">Response Time</p>
+              <p className="contact-info-value">Usually within 24 hours</p>
+            </div>
+          </div>
+        </div>
+
         <div className="grid-12-cols mt-16">
           <div className="xl:col-span-5">
             <div className="flex-center card-border rounded-xl p-10">

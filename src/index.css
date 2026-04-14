@@ -352,6 +352,34 @@ section {
     @apply flex justify-center items-center w-52 h-60 relative;
   }
 
+  .contact-info-strip {
+    @apply mt-12 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6;
+  }
+
+  .contact-info-item {
+    @apply flex items-center gap-4 border border-black-50 bg-black-100 rounded-xl p-5 md:p-6 transition-all duration-300;
+
+    &[href]:hover {
+      @apply border-blue-50;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(59, 130, 246, 0.15);
+    }
+  }
+
+  .contact-info-icon {
+    @apply size-12 flex-none flex items-center justify-center rounded-full text-2xl;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(167, 139, 250, 0.2));
+    border: 1px solid rgba(147, 197, 253, 0.3);
+  }
+
+  .contact-info-label {
+    @apply text-xs uppercase tracking-wider text-blue-50 mb-1;
+  }
+
+  .contact-info-value {
+    @apply text-white text-sm md:text-base font-medium break-all;
+  }
+
   form {
     label {
       @apply block text-white-50 mb-2;
