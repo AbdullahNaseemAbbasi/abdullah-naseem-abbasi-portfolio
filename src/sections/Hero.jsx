@@ -25,6 +25,16 @@ const Hero = () => {
         {/* LEFT: Hero Content */}
         <header className="flex flex-col justify-center md:w-full w-screen md:px-20 px-5">
           <div className="flex flex-col gap-7">
+            <div className="hero-profile">
+              <div className="hero-avatar">
+                <img src="/images/myphoto.png" alt="Abdullah Naseem Abbasi" />
+              </div>
+              <div className="hero-status">
+                <span className="status-dot" />
+                <span>Available for Work</span>
+              </div>
+            </div>
+
             <div className="hero-text">
               <h1>
                 Shaping
