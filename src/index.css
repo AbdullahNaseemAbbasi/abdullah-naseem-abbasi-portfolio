@@ -270,7 +270,12 @@ section {
   }
 
   .timeline {
-    @apply absolute z-30 h-[110%] -top-10 w-14 md:w-28 bg-black;
+    @apply absolute z-30 h-[110%] -top-10 w-14 md:w-28;
+    background:
+      radial-gradient(ellipse 90% 70% at 50% -10%, rgba(59, 130, 246, 0.25), transparent 60%),
+      radial-gradient(ellipse 80% 60% at 50% 110%, rgba(99, 102, 241, 0.18), transparent 60%),
+      linear-gradient(180deg, #020617 0%, #0a1530 35%, #0b1a3a 65%, #020617 100%);
+    background-attachment: fixed;
   }
 
   .timeline-logo {
@@ -409,19 +414,18 @@ section {
 
 .gradient-edge:nth-of-type(1) {
   left: 0;
-  background: rgb(0, 0, 0);
   background: linear-gradient(
     90deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(255, 255, 255, 0) 100%
+    rgba(11, 26, 58, 1) 0%,
+    rgba(11, 26, 58, 0) 100%
   );
 }
 .gradient-edge:nth-of-type(2) {
   right: 0;
   background: linear-gradient(
     -90deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(255, 255, 255, 0) 100%
+    rgba(11, 26, 58, 1) 0%,
+    rgba(11, 26, 58, 0) 100%
   );
 }
 
