@@ -122,6 +122,9 @@ const Experience = () => {
                       </div>
                       <div>
                         <h1 className="font-semibold text-3xl">{card.title}</h1>
+                        <p className="text-blue-50 text-lg md:text-xl mt-2">
+                          @ {card.company}
+                        </p>
                         <p className="my-5 text-white-50">
                           🗓️&nbsp;{card.date}
                         </p>

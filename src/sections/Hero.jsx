@@ -53,8 +53,8 @@ const Hero = () => {
             <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
               Hi, I’m Abdullah — a Full Stack Developer from Karachi, Pakistan.
               <br />
-              I build scalable, production-ready web apps that drive real
-              business results.
+              I build web applications that actually work — fast, scalable, and
+              built to last.
             </p>
 
             <Button

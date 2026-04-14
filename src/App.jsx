@@ -1,4 +1,3 @@
-import Testimonials from "./sections/Testimonials";
 import Footer from "./sections/Footer";
 import Contact from "./sections/Contact";
 import TechStack from "./sections/TechStack";
@@ -13,12 +12,11 @@ const App = () => (
   <>
     <Navbar />
     <Hero />
+    <FeatureCards />
     <ShowcaseSection />
     <LogoShowcase />
-    <FeatureCards />
     <Experience />
     <TechStack />
-    <Testimonials />
     <Contact />
     <Footer />
   </>

@@ -1,20 +1,8 @@
 const navLinks = [
-  {
-    name: "Work",
-    link: "#work",
-  },
-  {
-    name: "Experience",
-    link: "#experience",
-  },
-  {
-    name: "Skills",
-    link: "#skills",
-  },
-  {
-    name: "Testimonials",
-    link: "#testimonials",
-  },
+  { name: "About", link: "#about" },
+  { name: "Work", link: "#work" },
+  { name: "Experience", link: "#experience" },
+  { name: "Skills", link: "#skills" },
 ];
 
 const words = [
@@ -30,9 +18,8 @@ const words = [
 
 const counterItems = [
   { value: 3, suffix: "+", label: "Years of Experience" },
-  { value: 20, suffix: "+", label: "Projects Completed" },
-  { value: 10, suffix: "+", label: "Happy Clients" },
-  { value: 95, suffix: "%", label: "Client Satisfaction" },
+  { value: 15, suffix: "+", label: "Technologies Mastered" },
+  { value: 10, suffix: "+", label: "Projects Built" },
 ];
 
 const logoIconsList = [
@@ -50,44 +37,26 @@ const logoIconsList = [
   { name: "Docker", imgPath: "/images/logos/docker.svg" },
 ];
 
-const abilities = [
+const skillCategories = [
   {
-    imgPath: "/images/seo.png",
-    title: "Quality Focus",
-    desc: "Delivering high-quality, production-ready code with attention to every detail.",
+    title: "Frontend",
+    tech: "React, Next.js, TypeScript, Tailwind CSS",
+    desc: "Clean, responsive interfaces that users love to interact with.",
   },
   {
-    imgPath: "/images/chat.png",
-    title: "Reliable Communication",
-    desc: "Keeping you updated at every step to ensure transparency and clarity.",
+    title: "Backend",
+    tech: "Node.js, Express, NestJS, Python, Django, Java, Spring Boot",
+    desc: "APIs that are fast, secure, and easy to scale.",
   },
   {
-    imgPath: "/images/time.png",
-    title: "On-Time Delivery",
-    desc: "Making sure projects are completed on schedule, with quality & attention to detail.",
-  },
-];
-
-const techStackImgs = [
-  {
-    name: "React & Next.js",
-    imgPath: "/images/logos/react.png",
+    title: "Database & Cloud",
+    tech: "PostgreSQL, MongoDB, MySQL, Redis, Supabase",
+    desc: "Data solutions designed for performance.",
   },
   {
-    name: "NestJS & Spring Boot",
-    imgPath: "/images/logos/node.png",
-  },
-  {
-    name: "Java & TypeScript",
-    imgPath: "/images/logos/three.png",
-  },
-  {
-    name: "PostgreSQL & Supabase",
-    imgPath: "/images/logos/python.svg",
-  },
-  {
-    name: "Docker & Git",
-    imgPath: "/images/logos/git.svg",
+    title: "DevOps",
+    tech: "Docker, Kubernetes, Vercel, Railway",
+    desc: "Smooth deployments with zero downtime.",
   },
 ];
 
@@ -126,69 +95,19 @@ const techStackIcons = [
 
 const expCards = [
   {
-    review: "Abdullah has been a key contributor to our engineering team, delivering full-stack solutions that have significantly improved our product quality and deployment speed.",
+    review:
+      "Building scalable full-stack applications from database to deployment — owning features end-to-end across React/Next.js frontends and NestJS/Spring Boot backends.",
     imgPath: "/images/exp1.png",
     logoPath: "/images/logo1.png",
     title: "Full Stack Developer",
+    company: "Zerovertical Labs",
     date: "2022 - Present",
     responsibilities: [
-      "Building and maintaining scalable web applications using Next.js, NestJS, and Spring Boot.",
-      "Designing and implementing RESTful APIs and database architectures with PostgreSQL, MongoDB, and Supabase.",
-      "Collaborating with cross-functional teams to deliver production-ready features on tight deadlines.",
-      "Setting up CI/CD pipelines and Docker-based deployment workflows.",
+      "Building production-ready web applications using React, Next.js, and TypeScript with pixel-perfect, responsive UIs.",
+      "Designing and developing scalable backend APIs with Node.js, NestJS, Express, and Spring Boot.",
+      "Architecting database solutions using PostgreSQL, MongoDB, and Supabase for optimal performance and reliability.",
+      "Setting up containerized deployments and CI/CD pipelines with Docker, Vercel, and Railway for zero-downtime releases.",
     ],
-  },
-];
-
-const expLogos = [
-  {
-    name: "logo1",
-    imgPath: "/images/logo1.png",
-  },
-];
-
-const testimonials = [
-  {
-    name: "Sarah Mitchell",
-    mentions: "@sarahmitchell",
-    review:
-      "Abdullah built our entire SaaS platform from scratch. His ability to handle both frontend and backend with equal expertise is rare. The end product was polished, fast, and exactly what we envisioned.",
-    imgPath: "/images/client1.png",
-  },
-  {
-    name: "James Carter",
-    mentions: "@jamescarter",
-    review:
-      "Working with Abdullah was a fantastic experience. He transformed our outdated system into a modern, scalable web application. His knowledge of Next.js and NestJS is top-notch. Highly recommend!",
-    imgPath: "/images/client3.png",
-  },
-  {
-    name: "Fatima Khan",
-    mentions: "@fatimakhan",
-    review:
-      "Abdullah delivered our e-commerce platform ahead of schedule. His attention to detail, clean code practices, and proactive communication made the entire process smooth. He's our go-to developer now.",
-    imgPath: "/images/client2.png",
-  },
-  {
-    name: "David Reynolds",
-    mentions: "@davidreynolds",
-    review:
-      "Abdullah's full-stack skills are impressive. He architected our multi-tenant platform with role-based access, real-time features, and Stripe integration — all working flawlessly in production.",
-    imgPath: "/images/client5.png",
-  },
-  {
-    name: "Ayesha Siddiqui",
-    mentions: "@ayeshasiddiqui",
-    review:
-      "We hired Abdullah for a complex project involving AI integration and real-time collaboration. He exceeded every expectation. The codebase he delivered was clean, well-documented, and easy to maintain.",
-    imgPath: "/images/client4.png",
-  },
-  {
-    name: "Michael Torres",
-    mentions: "@michaeltorres",
-    review:
-      "Abdullah is a true professional. He understood our requirements perfectly and delivered a solution that not only met but exceeded our expectations. His expertise in React, Spring Boot, and database design is outstanding.",
-    imgPath: "/images/client6.png",
   },
 ];
 
@@ -207,14 +126,11 @@ const socialImgs = [
 
 export {
   words,
-  abilities,
+  skillCategories,
   logoIconsList,
   counterItems,
   expCards,
-  expLogos,
-  testimonials,
   socialImgs,
   techStackIcons,
-  techStackImgs,
   navLinks,
 };
