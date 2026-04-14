@@ -36,39 +36,18 @@ const counterItems = [
 ];
 
 const logoIconsList = [
-  {
-    imgPath: "/images/logos/company-logo-1.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-2.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-3.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-4.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-5.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-6.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-7.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-8.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-9.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-10.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-11.png",
-  },
+  { name: "JavaScript", imgPath: "/images/logos/javascript.svg" },
+  { name: "TypeScript", imgPath: "/images/logos/typescript.svg" },
+  { name: "React", imgPath: "/images/logos/react.svg" },
+  { name: "Node.js", imgPath: "/images/logos/nodejs.svg" },
+  { name: "Express.js", imgPath: "/images/logos/express.svg" },
+  { name: "NestJS", imgPath: "/images/logos/nestjs.svg" },
+  { name: "Java", imgPath: "/images/logos/java.svg" },
+  { name: "Ruby", imgPath: "/images/logos/ruby.svg" },
+  { name: "MongoDB", imgPath: "/images/logos/mongodb.svg" },
+  { name: "Supabase", imgPath: "/images/logos/supabase.svg" },
+  { name: "Spring Boot", imgPath: "/images/logos/springboot.svg" },
+  { name: "Docker", imgPath: "/images/logos/docker.svg" },
 ];
 
 const abilities = [
