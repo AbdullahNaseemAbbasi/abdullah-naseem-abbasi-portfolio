@@ -67,11 +67,36 @@ const Hero = () => {
               built to last.
             </p>
 
-            <Button
-              text="See My Work"
-              className="md:w-80 md:h-16 w-60 h-12"
-              id="counter"
-            />  
+            <div className="hero-cta-group">
+              <Button
+                text="See My Work"
+                className="md:w-72 md:h-16 w-56 h-12"
+                id="counter"
+              />
+              <a
+                href="/Abdullah_Naseem_Abbasi_Resume.pdf"
+                download="Abdullah_Naseem_Abbasi_Resume.pdf"
+                className="download-cv-btn group"
+              >
+                <span className="download-icon">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="7 10 12 15 17 10" />
+                    <line x1="12" y1="15" x2="12" y2="3" />
+                  </svg>
+                </span>
+                <span>Download CV</span>
+              </a>
+            </div>
           </div>
         </header>
 
