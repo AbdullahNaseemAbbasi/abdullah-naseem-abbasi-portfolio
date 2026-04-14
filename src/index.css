@@ -9,10 +9,29 @@ html,
 body {
   width: 100dvw;
   overflow-x: hidden;
-  background-color: black;
   color: white;
   scroll-behavior: smooth;
   font-family: "Mona Sans", sans-serif;
+  cursor: none;
+}
+
+body {
+  background:
+    radial-gradient(ellipse 90% 70% at 50% -10%, rgba(59, 130, 246, 0.25), transparent 60%),
+    radial-gradient(ellipse 80% 60% at 50% 110%, rgba(99, 102, 241, 0.18), transparent 60%),
+    linear-gradient(180deg, #020617 0%, #0a1530 35%, #0b1a3a 65%, #020617 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+a, button, [role="button"], input, textarea, select, label {
+  cursor: none;
+}
+
+@media (hover: none), (pointer: coarse) {
+  html, body, a, button, [role="button"], input, textarea, select, label {
+    cursor: auto;
+  }
 }
 
 section {
@@ -21,12 +40,12 @@ section {
 
 @theme {
   --font-sans: "Mona Sans", sans-serif;
-  --color-white-50: #d9ecff;
-  --color-black-50: #1c1c21;
-  --color-black-100: #0e0e10;
-  --color-black-200: #282732;
-  --color-blue-50: #839cb5;
-  --color-blue-100: #2d2d38;
+  --color-white-50: #dbeafe;
+  --color-black-50: #1e293b;
+  --color-black-100: #0b1220;
+  --color-black-200: #1e2a44;
+  --color-blue-50: #93c5fd;
+  --color-blue-100: #1e293b;
 }
 
 @layer utilities {
@@ -481,4 +500,63 @@ section {
 
 .card:hover::before {
   opacity: 1;
+}
+
+/* Custom Cursor */
+.custom-cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background: #60a5fa;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 12px rgba(96, 165, 250, 0.8),
+              0 0 24px rgba(96, 165, 250, 0.4);
+  transition: width 0.2s ease, height 0.2s ease, background 0.2s ease;
+}
+
+.custom-cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border: 1.5px solid rgba(147, 197, 253, 0.8);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease, height 0.3s ease,
+              border-color 0.3s ease, background 0.3s ease;
+  backdrop-filter: blur(1px);
+}
+
+.custom-cursor-ring.hovering {
+  width: 64px;
+  height: 64px;
+  border-color: rgba(167, 139, 250, 0.9);
+  background: rgba(96, 165, 250, 0.08);
+}
+
+.custom-cursor-dot.hovering {
+  width: 4px;
+  height: 4px;
+  background: #a78bfa;
+}
+
+.custom-cursor-ring.clicking {
+  width: 28px;
+  height: 28px;
+  border-color: #f472b6;
+}
+
+@media (hover: none), (pointer: coarse) {
+  .custom-cursor-dot,
+  .custom-cursor-ring {
+    display: none;
+  }
 }
