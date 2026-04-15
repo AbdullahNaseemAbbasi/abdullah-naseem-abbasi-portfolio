@@ -116,11 +116,7 @@ const Experience = () => {
                 </div>
                 <div className="xl:w-4/6 w-full">
                   <div className="flex items-start">
-                    <div className="timeline-wrapper">
-                      <div className="timeline" />
-                      <div className="gradient-line w-1 h-full" />
-                    </div>
-                    <div className="expText flex xl:gap-20 md:gap-8 gap-3 relative z-20 w-full min-w-0">
+                    <div className="expText flex xl:gap 12 md:gap-6 gap-3 relative z-20 w-full min-w-0">
                       <div className="timeline-logo">
                         <img src={card.logoPath} alt="logo" />
                       </div>

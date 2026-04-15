@@ -114,7 +114,7 @@ section {
   }
 
   .hero-layout {
-    @apply relative z-10 xl:mt-8 mt-20 md:h-dvh md:min-h-dvh flex xl:items-center items-start justify-center;
+    @apply relative z-10 xl:mt-0 lg:mt-32 md:mt-28 mt-20 xl:h-dvh flex xl:items-center items-start justify-center;
   }
 
   .hero-text {
@@ -441,16 +441,7 @@ section {
   }
 
   .timeline-wrapper {
-    @apply absolute top-0 xl:left-[35.4vw] lg:left-16 md:left-10 sm:left-5 left-2 h-full flex justify-center;
-  }
-
-  .timeline {
-    @apply absolute z-30 h-[110%] -top-10 sm:w-10 w-8 md:w-20 lg:w-28;
-    background:
-      radial-gradient(ellipse 90% 70% at 50% -10%, rgba(59, 130, 246, 0.25), transparent 60%),
-      radial-gradient(ellipse 80% 60% at 50% 110%, rgba(99, 102, 241, 0.18), transparent 60%),
-      linear-gradient(180deg, #020617 0%, #0a1530 35%, #0b1a3a 65%, #020617 100%);
-    background-attachment: fixed;
+    @apply hidden;
   }
 
   .timeline-logo {
