@@ -92,49 +92,58 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className="flex-center md:mt-40 mt-20 section-padding xl:px-0"
+      className="flex-center md:mt-40 mt-16 section-padding xl:px-0 overflow-hidden"
     >
-      <div className="w-full h-full md:px-20 px-5">
+      <div className="w-full h-full md:px-10 lg:px-20 px-4">
         <TitleHeader
           title="Professional Work Experience"
           sub="💼 My Career Overview"
         />
-        <div className="mt-32 relative">
+        <div className="md:mt-32 mt-16 relative">
           <div className="relative z-50 xl:space-y-32 space-y-10">
             {expCards.map((card) => (
               <div key={card.title} className="exp-card-wrapper">
-                <div className="xl:w-2/6">
+                <div className="xl:w-2/6 w-full">
                   <GlowCard card={card}>
                     <div>
-                      <img src={card.imgPath} alt="exp-img" />
+                      <img
+                        src={card.imgPath}
+                        alt="exp-img"
+                        className="w-full h-auto rounded-lg"
+                      />
                     </div>
                   </GlowCard>
                 </div>
-                <div className="xl:w-4/6">
+                <div className="xl:w-4/6 w-full">
                   <div className="flex items-start">
                     <div className="timeline-wrapper">
                       <div className="timeline" />
                       <div className="gradient-line w-1 h-full" />
                     </div>
-                    <div className="expText flex xl:gap-20 md:gap-10 gap-5 relative z-20">
+                    <div className="expText flex xl:gap-20 md:gap-8 gap-3 relative z-20 w-full min-w-0">
                       <div className="timeline-logo">
                         <img src={card.logoPath} alt="logo" />
                       </div>
-                      <div>
-                        <h1 className="font-semibold text-3xl">{card.title}</h1>
-                        <p className="text-blue-50 text-lg md:text-xl mt-2">
+                      <div className="flex-1 min-w-0">
+                        <h1 className="font-semibold text-lg sm:text-xl md:text-2xl lg:text-3xl leading-snug">
+                          {card.title}
+                        </h1>
+                        <p className="text-blue-50 text-xs sm:text-sm md:text-lg lg:text-xl mt-1 md:mt-2">
                           @ {card.company}
                         </p>
-                        <p className="my-5 text-white-50">
+                        <p className="my-2 sm:my-3 md:my-5 text-white-50 text-xs sm:text-sm md:text-base">
                           🗓️&nbsp;{card.date}
                         </p>
-                        <p className="text-[#839CB5] italic">
+                        <p className="text-[#839CB5] italic text-xs sm:text-sm md:text-base">
                           Responsibilities
                         </p>
-                        <ul className="list-disc ms-5 mt-5 flex flex-col gap-5 text-white-50">
+                        <ul className="list-disc ms-4 md:ms-5 mt-2 md:mt-5 flex flex-col gap-2 sm:gap-3 md:gap-5 text-white-50">
                           {card.responsibilities.map(
                             (responsibility, index) => (
-                              <li key={index} className="text-lg">
+                              <li
+                                key={index}
+                                className="text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed break-words"
+                              >
                                 {responsibility}
                               </li>
                             )
