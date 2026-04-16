@@ -22,7 +22,6 @@ const Hero = () => {
       </div>
 
       <div className="hero-layout">
-        {/* LEFT: Hero Content */}
         <header className="flex flex-col justify-center w-full md:px-20 sm:px-6 px-4">
           <div className="flex flex-col gap-4 sm:gap-5 md:gap-7 max-w-full">
             <div className="hero-profile">
@@ -99,7 +98,6 @@ const Hero = () => {
           </div>
         </header>
 
-        {/* RIGHT: 3D Model or Visual */}
         <figure>
           <div className="hero-3d-layout">
             <HeroExperience />
