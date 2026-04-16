@@ -7,6 +7,7 @@ import ContactExperience from "../components/models/contact/ContactExperience";
 const Contact = () => {
   const formRef = useRef(null);
   const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState(null);
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -20,7 +21,8 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true); // Show loading state
+    setLoading(true);
+    setStatus(null);
 
     try {
       await emailjs.sendForm(
@@ -30,12 +32,13 @@ const Contact = () => {
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
       );
 
-      // Reset form and stop loading
       setForm({ name: "", email: "", message: "" });
-    } catch (error) {
-      console.error("EmailJS Error:", error); // Optional: show toast
+      setStatus("success");
+    } catch {
+      setStatus("error");
     } finally {
-      setLoading(false); // Always stop loading, even on error
+      setLoading(false);
+      setTimeout(() => setStatus(null), 5000);
     }
   };
 
@@ -92,7 +95,7 @@ const Contact = () => {
                     name="name"
                     value={form.name}
                     onChange={handleChange}
-                    placeholder="What’s your good name?"
+                    placeholder="What's your good name?"
                     required
                   />
                 </div>
@@ -105,7 +108,7 @@ const Contact = () => {
                     name="email"
                     value={form.email}
                     onChange={handleChange}
-                    placeholder="What’s your email address?"
+                    placeholder="What's your email address?"
                     required
                   />
                 </div>
@@ -123,8 +126,10 @@ const Contact = () => {
                   />
                 </div>
 
-                <button type="submit">
-                  <div className="cta-button group">
+                <button type="submit" disabled={loading}>
+                  <div
+                    className={`cta-button group ${loading ? "opacity-60 pointer-events-none" : ""}`}
+                  >
                     <div className="bg-circle" />
                     <p className="text">
                       {loading ? "Sending..." : "Send Message"}
@@ -134,6 +139,18 @@ const Contact = () => {
                     </div>
                   </div>
                 </button>
+
+                {status === "success" && (
+                  <div className="toast-success">
+                    Message sent successfully! I'll get back to you soon.
+                  </div>
+                )}
+                {status === "error" && (
+                  <div className="toast-error">
+                    Failed to send message. Please try again or email me
+                    directly.
+                  </div>
+                )}
               </form>
             </div>
           </div>
