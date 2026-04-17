@@ -75,35 +75,35 @@ const AppShowcase = () => {
                 >
                   GitHub →
                 </a>
-              </div>
-            </div>
-          </div>
+              </div> 
+            </div> 
+          </div> 
 
-          <div className="project-list-wrapper overflow-hidden">
-            <div className="project" ref={shopnowRef}>
-              <div className="image-wrapper bg-[#FFEFDB]">
+          <div className="project-list-wrapper overflow-hidden"> 
+            <div className="project" ref={shopnowRef}> 
+              <div className="image-wrapper bg-[#FFEFDB]"> 
                 <img
-                  src="/images/project2.png"
-                  alt="ShopNow - E-Commerce Platform"
+                  src="/images/project2.png" 
+                  alt="ShopNow - E-Commerce Platform" 
                 />
               </div>
-              <h2>ShopNow — Full-Stack E-Commerce Platform</h2>
+              <h2>ShopNow — Full-Stack E-Commerce Platform</h2> 
               <p className="text-white-50 text-sm mt-2">
-                Built with Next.js, Spring Boot, PostgreSQL & Tailwind CSS —
-                featuring JWT auth, product catalog, cart, orders, admin
+                Built with Next.js, Spring Boot, PostgreSQL & Tailwind CSS — 
+                featuring JWT auth, product catalog, cart, orders, admin 
                 dashboard & more.
               </p>
-              <div className="flex gap-3 mt-3">
+              <div className="flex gap-3 mt-3"> 
                 <a
-                  href="https://shopnow-frontend-bay.vercel.app"
+                  href="https://shopnow-frontend-bay.vercel.app" 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-50 underline text-sm"
+                  className="text-blue-50 underline text-sm" 
                 >
                   Live Demo →
                 </a>
                 <a
-                  href="https://github.com/AbdullahNaseemAbbasi/shopnow-frontend"
+                  href="https://github.com/AbdullahNaseemAbbasi/shopnow-frontend" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-50 underline text-sm"
